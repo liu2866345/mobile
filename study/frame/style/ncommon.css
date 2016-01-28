@@ -1,0 +1,546 @@
+@charset "UTF-8";
+body, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, hr, html, input, li, ol, p, select, span, strong, table, tbody, td, textarea, th, thead, tr, ul {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+body {
+  min-width: 320px;
+  line-height: 16px;
+  color: #000;
+  font-size: 12px;
+  -webkit-text-size-adjust: none;
+  font-family: Arial, Simsun, "宋体", sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+filedset, img {
+  border: 0;
+  vertical-align: middle;
+  -ms-interpolation-mode: bicubic;
+}
+
+address, caption, cite, code, em, i, th {
+  font-weight: 400;
+  font-style: normal;
+}
+
+li {
+  list-style: none;
+  vertical-align: bottom;
+  list-style-type: none;
+}
+
+caption, th {
+  text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  font-size: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 400;
+}
+
+a:focus, a:hover {
+  text-decoration: none;
+  color: #dc002f;
+}
+
+button, input, select, textarea {
+  margin: 0;
+  border: 0;
+  font-weight: inherit;
+  vertical-align: baseline;
+  outline: 0;
+}
+
+button, input[type=button], input[type=text], select, textarea {
+  background: 0;
+}
+
+button, input {
+  line-height: normal;
+}
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+button[disabled], input[disabled] {
+  cursor: default;
+}
+
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+textarea {
+  resize: none;
+  vertical-align: top;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+
+div {
+  margin: 0 auto;
+}
+
+a, a:hover {
+  text-decoration: none;
+  color: #000;
+  font-weight: 400;
+}
+
+.clearFix:after {
+  clear: both;
+  content: "";
+  display: block;
+  font-size: 0;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+}
+
+.clearFix {
+  clear: both;
+  zoom: 1;
+}
+
+.mt1 {
+  margin-top: 1px;
+}
+
+.mr1 {
+  margin-right: 1px;
+}
+
+.mb1 {
+  margin-bottom: 1px;
+}
+
+.ml1 {
+  margin-left: 1px;
+}
+
+.mt2 {
+  margin-top: 2px;
+}
+
+.mr2 {
+  margin-right: 2px;
+}
+
+.mb2 {
+  margin-bottom: 2px;
+}
+
+.ml2 {
+  margin-left: 2px;
+}
+
+.mt3 {
+  margin-top: 3px;
+}
+
+.mr3 {
+  margin-right: 3px;
+}
+
+.mb3 {
+  margin-bottom: 3px;
+}
+
+.ml3 {
+  margin-left: 3px;
+}
+
+.mt5 {
+  margin-top: 5px;
+}
+
+.mr5 {
+  margin-right: 5px;
+}
+
+.mb5 {
+  margin-bottom: 5px;
+}
+
+.ml5 {
+  margin-left: 5px;
+}
+
+.mt8 {
+  margin-top: 8px;
+}
+
+.mr8 {
+  margin-right: 8px;
+}
+
+.mb8 {
+  margin-bottom: 8px;
+}
+
+.ml8 {
+  margin-left: 8px;
+}
+
+.mt10 {
+  margin-top: 10px;
+}
+
+.mr10 {
+  margin-right: 10px;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+.ml10 {
+  margin-left: 10px;
+}
+
+.mt15 {
+  margin-top: 15px;
+}
+
+.mr15 {
+  margin-right: 15px;
+}
+
+.mb15 {
+  margin-bottom: 15px;
+}
+
+.ml15 {
+  margin-left: 15px;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.mr20 {
+  margin-right: 20px;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}
+
+.ml20 {
+  margin-left: 20px;
+}
+
+#header-1, #content-1, #footer-1 {
+  min-width: 400px;
+}
+
+#header-1 {
+  min-height: 81px;
+}
+
+#content-1 {
+  min-height: 600px;
+}
+
+#footer-1 {
+  min-height: 140px;
+}
+
+.textOvf, .content_register_login .cr_popLogBox li strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+input.textLabel, .content_register_login .styIptTxt input {
+  padding: 1px 5px;
+  height: 16px;
+  line-height: 16px;
+  background-color: #fff;
+  border: 1px solid;
+  border-color: #858585 #e2e2e2 #e2e2e2 #c1c1c1;
+}
+
+._public_fontSize, .content_register_login .cr_tit {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+._public_fontSizeLink, .content_register_login .cr_tit a, .content_register_login .cr_tit a:hover, .content_register_login .cr_tit a:visited, .content_login .styCheckBox label a {
+  font-size: 12px;
+  color: #d70023;
+  text-decoration: underline;
+}
+
+._spriteIcon, .content_login .cr_othland .iconAlipay, .content_login .cr_othland .iconSina4, .content_login .cr_othland .iconKaixin2, .content_login .cr_othland .iconWangyi, .content_login .cr_othland .iconRenren2, .content_login .cr_othland .iconQQ, .content_login .cr_othland .iconTaobao {
+  background-image: url("../imgs/spriteIcon.gif");
+  background-repeat: no-repeat;
+}
+
+._spriteButton, .content_register li.popLogBtn button, .content_login li.popLogBtn button {
+  background-image: url("../imgs/spriteButton.gif");
+  background-repeat: no-repeat;
+}
+
+._spriteBtn {
+  background-image: url("../imgs/spriteBtn.gif");
+  background-repeat: no-repeat;
+}
+
+.header_register {
+  padding-top: 26px;
+  padding-bottom: 35px;
+}
+.header_register .hr {
+  width: 1000px;
+  margin: 0px auto;
+}
+.header_register .hr .logo {
+  margin: 0;
+  height: 30px;
+}
+.header_register .hr .logo a {
+  display: block;
+  width: 213px;
+  height: 25px;
+  margin: 2px 0 0 10px;
+  background: url("../imgs/logo.gif") no-repeat;
+  background-size: contain;
+}
+.header_register .hr .logo a img {
+  display: none;
+}
+
+.footer_register .ft_wp {
+  padding: 20px 0;
+}
+.footer_register .ft_wp p {
+  text-align: center;
+}
+.footer_register .ft_wp p span {
+  display: inline-block;
+}
+.footer_register .ft_wp a {
+  margin-left: 0px;
+  margin-right: 20px;
+}
+
+.content_register_login {
+  background: url("../imgs/meize42.jpg") center center no-repeat;
+  position: relative;
+  min-height: 600px;
+}
+.content_register_login .cr_post {
+  width: 1000px;
+  display: block;
+  padding-top: 80px;
+}
+.content_register_login .cr_wp {
+  background-color: white;
+  min-width: 360px;
+  padding: 30px 25px;
+  float: left;
+  -o-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+.content_register_login .cr_tit {
+  margin-bottom: 15px;
+}
+.content_register_login .cr_tit a, .content_register_login .cr_tit a:hover, .content_register_login .cr_tit a:visited {
+  margin-right: 25px;
+  float: right;
+}
+.content_register_login .cr_popLogBox {
+  padding: 0px;
+}
+.content_register_login .cr_popLogBox li {
+  padding: 5px 0;
+}
+.content_register_login .cr_popLogBox li strong {
+  width: 55px;
+  color: #666;
+  float: left;
+  clear: left;
+  text-align: left;
+  display: inline-block;
+  line-height: 20px;
+}
+.content_register_login .styIptTxt {
+  display: inline-block;
+  position: relative;
+}
+.content_register_login .styIptTxt.error, .content_register_login .styIptTxt.succees {
+  padding-right: 20px;
+}
+.content_register_login .styIptTxt.error:after, .content_register_login .styIptTxt.succees:after {
+  content: "";
+  top: 3px;
+  right: 0px;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+}
+.content_register_login .styIptTxt.error:after {
+  background-position: 0 -470px;
+}
+.content_register_login .styIptTxt.succees:after {
+  background-position: 0 -450px;
+}
+.content_register_login .styIptTxt input {
+  width: 220px;
+}
+.content_register_login .styIptTxt input.authCode {
+  width: 55px;
+}
+.content_register_login .registerRandomImg {
+  width: 90px;
+  height: 30px;
+}
+.content_register_login .cue {
+  line-height: 22px;
+  padding-top: 5px;
+  display: block;
+  color: #dc002f;
+}
+.content_register_login .cue.Codecue {
+  margin-left: 55px;
+}
+.content_register_login .styCheckBox {
+  margin-left: 55px;
+}
+.content_register_login .styCheckBox input {
+  margin-right: 8px;
+}
+.content_register_login li.popLogBtn {
+  margin-top: 10px;
+  padding-left: 55px;
+}
+.content_register_login .negotiation {
+  margin-left: 55px;
+  position: relative;
+}
+.content_register_login .negotiation .agreementMain {
+  overflow: hidden;
+  position: absolute;
+  bottom: -40px;
+  left: 300px;
+  background: url("../imgs/pop_register.png") no-repeat;
+  display: block;
+  width: 286px;
+  height: 183px;
+  padding: 23px 10px 0px 30px;
+  box-sizing: border-box;
+}
+.content_register_login .negotiation .scroll-pane {
+  width: 220px;
+  height: 130px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.content_register li.popLogBtn button {
+  width: 184px;
+  height: 40px;
+  background-position: -146px -810px;
+}
+
+.content_login .cr_tit {
+  margin-left: 0px;
+  width: 310px;
+}
+.content_login .loginTips {
+  color: #555;
+  padding-left: 55px;
+}
+.content_login .styCheckBox label {
+  width: 230px;
+}
+.content_login .styCheckBox label a {
+  float: right;
+}
+.content_login li.popLogBtn button {
+  width: 72px;
+  height: 40px;
+  background-position: -342px -200px;
+}
+.content_login .mobLogShare {
+  color: #999;
+}
+.content_login .cr_othland a:after {
+  content: "|";
+  margin: 0 8px;
+  color: #999;
+}
+.content_login .cr_othland a:last-child:after {
+  content: "";
+}
+.content_login .cr_othland .iconAlipay, .content_login .cr_othland .iconKaixin2, .content_login .cr_othland .iconQQ, .content_login .cr_othland .iconRenren2, .content_login .cr_othland .iconSina4, .content_login .cr_othland .iconTaobao, .content_login .cr_othland .iconWangyi {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  vertical-align: middle;
+  margin-right: 2px;
+}
+.content_login .cr_othland .iconAlipay {
+  background-position: 0 -490px;
+}
+.content_login .cr_othland .iconSina4 {
+  background-position: 0 -510px;
+}
+.content_login .cr_othland .iconKaixin2 {
+  background-position: 0 -530px;
+}
+.content_login .cr_othland .iconWangyi {
+  background-position: 0 -550px;
+}
+.content_login .cr_othland .iconRenren2 {
+  background-position: 0 -570px;
+}
+.content_login .cr_othland .iconQQ {
+  background-position: 0 -590px;
+}
+.content_login .cr_othland .iconTaobao {
+  background-position: 0 -1122px;
+}
+
+/*# sourceMappingURL=ncommon.css.map */

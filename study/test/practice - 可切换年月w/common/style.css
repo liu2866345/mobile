@@ -1,0 +1,97 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	padding:0px;
+	margin:0px;
+	}
+body{
+	font-size:.26rem;
+	font-family:"微软雅黑","sans-serif";
+	}
+.calendar{
+	width:100%;
+	height:6.4rem;
+	margin:0 auto;
+	}
+.calendar .top{
+	background-color:#EEEFF3;
+	border-bottom:1px solid #DDDEE3;
+	clear:both;
+	}
+.calendar .top a{
+	height:.75rem;
+	color:#6595C6;
+	line-height:.75rem;
+	display:inline-block;
+	}
+.calendar .top .all{
+	margin:0 .45rem 0 .2rem;
+	}
+.calendar .top .close{
+	margin-right:.2rem;
+	float:right;
+	}
+.calendar .middle .year{
+	height:.76rem;
+	line-height:.76rem;
+	background-color:#EEEFF3;
+	text-align:center;
+	}
+.calendar .middle .year a{
+	color:#6595C6;
+	font-size: .35rem;
+	font-family:"黑体";
+	}
+.calendar .middle .year span{
+	margin:0 .38rem;
+	}
+.calendar .middle .week{
+	background-color:#EEEFF3;
+	height:.39rem;
+	line-height:.39rem;
+	font-size:.20rem;
+	}
+.calendar .middle .week ul li{
+	width:14%;
+	text-align:center;
+	float:left;
+	}
+.calendar .top a,.calendar .middle .year span{
+	font-size:.26rem;
+	font-family:"微软雅黑","sans-serif";
+	}
+.bottom ul{
+	clear:both;
+	}
+.bottom ul li{
+	width:14%;
+	float:left;
+	text-align:center;
+	height:.74rem;
+	line-height:.74rem;	
+	font-size:.20rem;
+	position:relative;
+}
+.bottom ul .back_gray:before,.bottom ul li.active:before{
+	content: '';
+    display: block;
+    width: .45rem;
+    height: .45rem;
+    border-radius:70%;
+    background-color: #EEEFF3;
+    z-index: -1;
+    position: absolute;
+    left: 47%;
+    margin-left: -0.175rem;
+    top: .15rem;
+}
+
+.bottom ul .back_gray:hover:before{
+	background-color:#1676E4;
+	}
+.bottom ul li.active:before{
+	background-color:#1676E4;
+}
+.bottom ul li.disabled{
+	color:#CCC;
+}

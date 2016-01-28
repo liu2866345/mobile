@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title></title>
+    <script type="text/javascript" src="../js/common/jquery.js"></script>
+    <script type="text/javascript" src="../js/frame/adaptor.js"></script>
+    <script type="text/javascript" src="../js/frame/touch.js"></script>
+    <script type="text/javascript" src="../js/frame/carousel.js"></script>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        em{
+            width:10px;
+            height:10px;
+            display: inline-block;
+            border-radius: 50%;
+            background-color: #0086b3;
+            margin-left: 24px;
+        }
+        em.cur{
+            background-color: #000;
+        }
+        ul{
+            /*margin-left:30px;*/
+        }
+        ul li{
+            display: inline-block;
+            width:200px;
+            /*background-color: #aaaaaa;*/
+            /*padding-left:20px;*/
+            width:100%;
+            /*float:left;*/
+padding-right:30px;
+        }
+        ul li img{
+            /*height:100%;*/
+            width:170px;
+        }
+        .pre,.next{
+            top:40px;
+        }
+        .pre{
+            background: url("../images/arrow_left.jpg") no-repeat left center;
+        }
+        .next{
+        background:url("../images/arrow_right.jpg") no-repeat left center;
+        }
+    </style>
+
+</head>
+<body>
+    
+
+    <div class="slide" style="position: relative;width:750px;height:220px;;margin-top:100px;background-color: #EE3">
+        <div class="slideItem" style="position: relative;width:400px;border:1px solid #323;overflow: hidden;height:100px;margin:auto;">
+            <ul style="position: absolute;height:100px;">
+                <li >
+                <img data-img="http://www.sephora.cn/campaign/campaign_img/2015/12/Banner/hp_decmenskincare_20151216.jpg" />
+                </li>
+                <li><img data-img="http://www.sephora.cn/campaign/campaign_img/2015/12/Banner/hp_decbody_20151216.jpg" /></li>
+                <li><img data-img="http://s1.sephorastatic.cn/wcsfrontend/campaign/campaign_img/2015/12/Banner/fragrance_bvlgari_20151216.jpg" /></li>
+                <li><img data-img="http://s1.sephorastatic.cn/wcsfrontend/campaign/campaign_img/2015/12/Banner/hp_haircategory_20151230.jpg" /></li>
+                <li><img src="http://www.sephora.cn/campaign/campaign_img/2015/12/Banner/hp_decbody_20151216.jpg" /></li>
+            </ul>
+        </div>
+        <div class="pre" style="width:30px;height:30px;position: absolute;left:0px;;" >pre</div>
+        <div class="next" style="width:30px;height:30px;position: absolute;right:0px;">next</div>
+        <div class="navDot" style="height:10px;margin-top:25px;    text-align: center;"></div>
+<form>
+    <input name="page" value="1" type="hidden"/>
+<input id="num1" /><input id="num2" /><input id="num3" /><input id="num0" />
+</form>
+    </div>
+<div id="log"></div>
+<script>
+
+//    var data = {page:$("input[name='page']").val()};
+    var asyn = {
+        type:"post",data:function(){//返回每次请求需要提交的数据
+            var _data = {};
+            _data.page = $("input[name='page']").val();
+            return _data;
+        },url:function(){//每次请求的url
+            var requestPage = arguments[0];
+            var arr1=[{url:"http://s3.sephorastatic.cn/products/V/S/5/2/4/0/2/2/1_02358_150x150.jpg",names:22},
+                {url:"http://s1.sephorastatic.cn/wcsfrontend/products/nopic_150x150.jpg",names:22},
+                {url:"http://s4.sephorastatic.cn/products/3/4/6/4/1/7/1_02386_150x150.jpg",names:2},
+                {url:"http://s4.sephorastatic.cn/products/3/4/3/6/9/0/1_02393_150x150.jpg",names:2},
+                {url:"http://www.sephora.cn/campaign/campaign_img/2015/12/Banner/hp_restoreuage_20151222.jpg",names:2}];
+            return null;
+        },isNeedAsyn:function(pageNum){//判断是否要同步false:不需要同步。pageNum:需要请求数据的页码
+            return false;
+            var flag = $("ul li:eq("+(pageNum-1)+")").attr("isLoad");
+            return flag=="false"?false:true;
+        },
+        success:function(data,pageNum){
+            $("ul li:eq("+(pageNum-1)+")").attr("isLoad",false);//设置已经请求标志
+            var datas = eval(data);//解析返回字符串
+            var url = datas[pageNum-1].url;
+            $("ul li:eq("+(pageNum-1)+") img").attr("src",url);
+            $("input[name='page']").val(pageNum+1);//设置下一次请求的页码
+        },
+        fail:function(data,pageNum){
+            console.log("请求数据失败。。");
+        }
+    };
+
+    $(document).ready(function(){
+        var ss = $(".slide").carouselSlide({
+            outerCon:".slide",
+            ulCon : ".slideItem",//包裹ul的div
+            preBtn : ".pre",//向前按钮
+            nextBtn : ".next",//向后按钮
+            navDot : ".navDot",//轮播点div em
+            eachPageNum:1,
+
+            slideHorizon:true,
+//            showDotNum:true,
+//            hideArrow:true,
+//            hideDot:true,
+//            speed:0.5,
+//            lastFull:true,
+//            asyn : asyn,
+            preExecute : function(cp){
+                if(cp == 1){
+                    var hasSrc = $("ul li:eq(0)").attr("src");
+                    if(hasSrc){
+                        return;
+                    }else{
+                        var src = $("ul li:eq(0) img").attr("data-img");
+                        $("ul li:eq(0) img").attr("src",src);
+                        $("ul li:eq(0) img").removeAttr("data-img");
+                    }
+                }
+            },
+            callback : function(pageNum){//pageNum当前页码
+
+                var hasSrc =  $("ul li:eq("+(pageNum)+")").attr("src");
+                if(hasSrc){
+                    return;
+                }else{
+                    var src = $("ul li:eq("+(pageNum)+") img").attr("data-img");
+                    $("ul li:eq("+(pageNum)+") img").attr("src",src);
+                    $("ul li:eq("+(pageNum)+") img").removeAttr("data-img");
+                }
+            }
+        });
+
+    });
+</script>
+    <script>
+        function getRandomArr(){
+            var oldArr = [0,1,2,3,4,5,6,7,8,9];
+            var newArr = [];
+            while(oldArr.length!=0){
+                var index = parseInt(Math.random()*(oldArr.length-1));//獲取oldarr的下标
+                newArr.push(oldArr[index]);
+                oldArr.splice(index,1);
+            }
+            return newArr;
+        }
+        var temp = getRandomArr();//随机后的数组
+        for(var i=0;i<10;i++){
+            document.getElementById("num"+i).value = temp[i];
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+.content_register{
+	.cr_wp{
+		max-width:300px;
+		margin:0 auto;
+		.ct_tit{
+			font-size:16px;
+			margin-bottom:15px;
+			font-weight:700;
+			a,a:hover,a:visited{
+			    font-size: 12px;
+			    color: #d70023;
+			    float: right;
+			    text-decoration: underline;
+			    margin-right: 25px;
+			}
+		}
+		.ct_loginTip{
+			color:#555;
+		}
+		.ct_popLogBox{
+			li{
+				padding: 5px 0;
+				strong{
+					display: none
+				}
+				.styIptTxt{
+					height: auto;
+					display: inline-block;
+					position: relative;
+					input{
+						height:30px;
+						width:288px;
+						border:1px solid #ddd;
+						padding:1px 5px;
+					}
+					span{
+						display: none
+					}
+					&.succees{
+						&:after{
+							content:'';
+							width: 8px;
+    						height: 8px;
+    						position: absolute;
+    						right:10px;
+    						top:10px;
+    						background-position: 0 -450px;
+						}
+					}
+					&.error{
+						input{
+							border-color: #f1748f;
+						}
+						&:after{
+							content:'';
+							width: 8px;
+    						height: 8px;
+    						position: absolute;
+    						right:10px;
+    						top:10px;
+    						background-position: 0 -470px;
+						}
+						span{
+						    line-height: 22px;
+						    padding-top: 5px;
+						    display: block;
+							color: $pick;
+						}
+					}
+				}
+			}
+			.styCheckBox{
+				padding-left: 0px;
+			    height: auto;
+			    line-height: 20px;
+				label{
+					display: inline;
+					margin:0px;
+					input{
+					    vertical-align: middle;
+					    margin:0px;
+					    margin-right: 8px;
+					    cursor: pointer;
+					}
+					& a.cr_fogLink,a:hover.cr_fogLink,a:visited.cr_fogLink{
+						margin-right:25px;
+						float: right;
+    					color: #d70023;
+    					text-decoration: underline;
+					}
+				}
+			}
+			.popLogBtn{
+				button{
+					width:300px;
+					height:40px;
+					float: none;
+					vertical-align: middle;
+					background: url('../imgs/spriteMobBtn.gif'); 
+				}
+			}
+		}
+		.popLogShare{
+			.mobLogShare{
+				text-align: center;
+			    width: 298px;
+			    height: 30px;
+			    line-height: 30px;
+			    border: 1px solid #000;
+			    margin-bottom: 10px;
+			    cursor: pointer;
+			    color: #999;
+			    .mobHidden{
+			    	display: none;
+			    }
+			}
+			.iconAlipay, .iconKaixin2, .iconQQ, .iconRenren2, .iconSina4, .iconTaobao, .iconWangyi{
+				display: inline-block;
+			    width: 18px;
+			    height: 18px;
+			    line-height: 18px;
+			    vertical-align: middle;
+			    margin-right: 2px;
+			}
+			.cr_othland{
+				a:after{
+					content:'|';
+					margin: 0 8px;
+    				color: #999;
+				}
+				a:last-child:after{
+					content:'';
+				}
+			}
+
+		}
+	}
+}

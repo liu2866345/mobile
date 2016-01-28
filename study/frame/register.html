@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8"><!-- 编码 -->
+	<link rel='dns-prefetch' href='/'><!-- dns预加载 -->
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><!-- 页面适配 -->
+	<meta name="apple-mobile-web-app-capable" content="yes"><!-- 删除苹果默认工具栏和菜单栏 -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"><!-- 控制状态栏样式 -->
+	<meta name="format-detection" content="telephone=no"><!-- 禁止电话高亮 -->
+
+	<title>SEPHORA丝芙兰化妆品中国官方购物网站</title>
+
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"><!-- bootstrap样式 -->
+	<link rel="stylesheet" href="bootstrap/css/normalize.css"><!-- bootstrap补充兼容样式，让不同的浏览器在渲染网页元素的时候形式更统一 -->
+	<link rel="stylesheet" href="style/ncommon.css"><!-- 自定义样式 -->
+	<!-- <link rel="stylesheet" href="style/ncommon.css"> -->
+
+</head>
+<body>
+
+	<header class="header_register Js_lazyfn" id="header-1" data-filehtml="component/header_register.html" data-filejs="component/header_register.js"></header>
+	
+	<section class="content_register" id="content-1" data-filehtml="component/content_register.html" data-filejs="component/content_register.js">
+		<div class="cr_wp">
+			<div class="ct_tit">
+				用户登录
+				<a href="javascript:;">
+					立即注册
+				</a>
+			</div>
+			<p class="ct_loginTip">
+				公共场所不建议自动登录，以防帐号丢失
+			</p>
+			<ul class="ct_popLogBox">
+				<li class="clearFix">
+					<strong>账号</strong>
+					<div id="loginNameDiv" class="styIptTxt error">
+						<input type="text" name="" value="" placeholder="E-mail/手机">
+						<span id="loginNameMsg">请输入您的邮箱地址</span>
+					</div>
+				</li>
+				<li class="clearFix">
+					<strong>账号</strong>
+					<div id="loginNameDiv" class="styIptTxt error">
+						<input type="text" name="" value="" placeholder="请输入密码">
+						<span id="loginPwdMsg">请输入您的账户密码</span>
+					</div>
+				</li>
+				<li class="styCheckBox">
+					<label>
+						<input type="checkbox" id="needRememberName">自动登录
+						<a href="javascript:;" class="cr_fogLink">忘记密码？</a>
+					</label>
+				</li>
+				<li class="popLogBtn">
+					<button type="登 陆"></button>
+				</li>
+			</ul>
+			<div class="popLogShare">
+				<p class="mobLogShare mt10">
+					<em class="desHidden">>></em>
+					使用合作网站账号登录丝芙兰
+				</p>
+				<p class="cr_othland mt10">
+					<a title="支付宝" href="javascript:;">
+						<em class="iconAlipay"></em>支付宝
+					</a>
+					<a title="新浪微博" href="javascript:;">
+						<em class="iconSina4"></em>支付宝
+					</a>
+					<a title="天猫" href="javascript:;">
+						<em class="iconTaobao"></em>天猫
+					</a>
+					<a title="支付宝" href="javascript:;">
+						<em class="iconRenren2"></em>人人网
+					</a>
+					<a title="QQ" href="javascript:;">
+						<em class="iconQQ"></em>QQ
+					</a>
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer_register Js_lazyfn" id="footer-1" data-filehtml="component/footer_register.html" data-filejs="component/footer_register.js">
+	</footer>
+
+	<script src="bootstrap/js/jquery.min.js"></script><!-- jQuery基本库，兼容bootstrap必须版本高于1.9.1 -->
+	<script src="bootstrap/js/bootstrap.min.js"></script><!-- bootstrap基本库，定义所有的基本效果 -->
+	<script src="js/common/ncommon.js"></script><!-- 自定义主程序，现包括懒加载，文件异步获取，以及一些基本方法的集合 -->
+</body>
+</html>

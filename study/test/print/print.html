@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="./jquery.js"></script>
+
+    <script src="./print.js"></script>
+</head>
+<body>
+    <a id="print" target="_self" onclick="$('body').printArea()">打印</a>
+</body>
+<script src=""></script>
+<script src="">
+    function newDate(){
+        var _date = new Date(arguments[0],arguments[1],arguments[2]);
+        this.getMonth = function(){
+            console.log("son get month...");
+            return _date.getMonth()+1;
+        };
+        this.setMonth = function(){
+            _date.setMonth(arguments[1]-1);
+        }
+    }
+    var news = newDate(2015,1,1);
+    new Date().getFullYear()
+</script>
+</html>
+<script type="text/javascript" >
+//    window.print();
+//    var iframe = document.createElement('IFRAME');
+//document.body.appendChild(iframe);
+//    var doc = iframe.contentWindow.document;
+//    var frameWindow = iframe.contentWindow;
+//frameWindow.print();
+</script>

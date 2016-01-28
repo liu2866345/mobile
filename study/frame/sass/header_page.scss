@@ -1,0 +1,27 @@
+.header_register{
+    padding-top:26px;
+    padding-bottom:35px;
+    .hr{
+    	border-bottom: 3px solid black;
+    	width:auto;
+    	max-width:$mwidth;
+    	padding:0;
+    	height:auto;
+    	margin:0px auto;
+    	.logo{
+    		margin: 0;
+        	height: 30px;
+        	a{
+        		display: block;
+        		width: 213px;
+        		height: 25px;
+        		margin: 2px 0 0 10px;
+        		background:  url('../imgs/logo.gif') no-repeat;
+        		background-size: contain;
+        		img{
+        			display: none
+        		}
+        	}
+    	}
+    }
+}

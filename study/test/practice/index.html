@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+*{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+	}
+.calculator{
+	width:500px;
+	height:480px;
+	border:3px solid #CCC;
+	margin: 20px auto;
+	}
+body{
+		}
+.p1{
+	height:40px;
+	border-bottom:1px solid #ccc;
+	line-height:40px;
+	font-size:14px;
+	font-weight:800;
+	}
+.answer{
+	height:70px;
+	width:100%;
+	border:none;
+	border-bottom:1px solid #CCC;
+	background-color:#FFF;
+	border-radius:0px;
+	}
+input{
+	opacity:0.6;
+	height:55px;
+	width:70px;
+	background-color:#CCC;
+	border-radius:6px;
+	box-shadow:1px 1px 1px #999;
+	font-weight:600;
+	font-size:20px;
+	outline:none;
+	}
+ul{
+	margin:0 10px;
+	}
+ul li{
+	margin:30px 15px;
+	}
+ul .fourth{
+	margin-left:68px;
+	}
+#num9{
+	width:130px;
+	margin-right:15px;
+	}
+</style>
+</head>
+
+<body>
+<div class="calculator">
+	<p class="p1">计算器</p>
+    <input class="answer"  type="text" name="result" />
+    <ul>
+    	<li>
+        	<input id="num1"      type="button"  onClick="CheckNumber(this); return false;"/>
+            <input id="num3"      type="button"  onClick="CheckNumber(this); return false;"/>
+            <input id="num2"      type="button"  onClick="CheckNumber(this); return false;"/>
+            <input class="fourth" type="button" value="del"  onClick="clearone(); return false;"/>
+            <input                type="button" value="C"  onClick="clear(); return false;"/>
+        </li>
+        <li>
+			<input id="num0"      type="button" onClick="CheckNumber(this); return false;"/>
+            <input id="num4"      type="button" onClick="CheckNumber(this); return false;"/>
+            <input id="num7"      type="button" onClick="CheckNumber(this); return false;"/>
+            <input class="fourth" type="button"  value="+" onClick="add(); return false;"/>
+            <input                type="button"  value="-" onClick="sub(); return false;"/>
+        </li>
+        <li>
+        	<input id="num5"      type="button" onClick="CheckNumber(this); return false;"/>
+            <input id="num6"      type="button" onClick="CheckNumber(this); return false;"/>
+            <input id="num8"      type="button" onClick="CheckNumber(this); return false;"/>
+            <input class="fourth" type="button" value="×" onClick="ride(); return false;"/>
+            <input                type="button" value="÷"onClick="div(); return false;"/>
+        </li>
+        </li>
+        <li>
+       	 	<input id="num9"      type="button" onClick="CheckNumber(this); return false;"/>
+            <input                type="button" value="." onClick="CheckNumber(this); return false;"/>
+            <input class="fourth" type="button" value="%" onClick="bf(); return false;"/>
+            <input                type="button" value="="onClick="result(); return false;"/>
+         </li>
+    </ul>
+ 
+	
+</div>
+<script>
+        function getRandomArr(){
+            var oldArr = [0,1,2,3,4,5,6,7,8,9]; 
+            var newArr = [];
+            while(oldArr.length!=0){
+                var index = parseInt(Math.random()*(oldArr.length));
+                newArr.push(oldArr[index]);
+                oldArr.splice(index,1);
+            }
+            return newArr;
+        }
+        var temp = getRandomArr();
+        for(var i=0;i<10;i++){
+            document.getElementById("num"+i).value= temp[i];
+        }
+    </script>
+</body>
+</html>
