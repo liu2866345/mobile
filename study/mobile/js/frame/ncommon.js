@@ -271,9 +271,9 @@
 			},
 			/**
 			 * [init 执行异步]
-			 * @param  {[type]} done     [执行预设donecl|fucntion(){}]
-			 * @param  {[type]} error    [failcl|fucntion(){}]
-			 * @param  {[type]} always   [执行预设alwayscl|fucntion(){}]
+			 * @param  {[type]} done     [执行预设donecl|function(){}]
+			 * @param  {[type]} error    [failcl|function(){}]
+			 * @param  {[type]} always   [执行预设alwayscl|function(){}]
 			 * 
 			 */
 			init: function() {
