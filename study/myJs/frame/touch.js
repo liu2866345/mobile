@@ -4,7 +4,7 @@
  * drag-left right
  */
 ;(function($,undefined){
-    var Positon = function(){
+    var Position = function(){
         this.start={x:0,y:0};
         this.end={x:0,y:0};
         this.click = false;//是否点击中 false不是点击
@@ -15,7 +15,7 @@
         * funClall:回调函数
         * */
         moveLR:function(forward,funClall){//
-            var tempPostion = new Positon();
+            var tempPostion = new Position();
             $(this).unbind(".liudl");//avoid repeat bind
             $(this).unbind(".drag");
             $(this).bind("touchstart.liudl",function(event){
